@@ -370,7 +370,10 @@ button { font-family: inherit; }
   border-bottom: 1px solid #ededed; break-inside: avoid; page-break-inside: avoid;
   min-height: calc(var(--mhbase) * var(--dscale)); align-items: flex-start;
 }
-.prob.wide, .prob.mid { align-items: center; }   /* 한 줄짜리는 번호를 식 한가운데에 */
+.prob.wide { align-items: center; }
+/* 한 줄짜리는 번호를 글자 '밑선'에 맞춥니다.
+   가운데에 맞추면 괄호처럼 아래로 긴 글자가 줄 높이를 키울 때 번호만 내려갑니다. */
+.prob.mid { align-items: baseline; }
 /* 문제 번호 — 동그라미 안의 숫자 (테두리라 흑백 인쇄에서도 보입니다) */
 .pno {
   flex: 0 0 auto;

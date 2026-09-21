@@ -203,7 +203,7 @@
         {
           no: 3, title: '길이 재기', steps: [
             S(207, '1 m = 100 cm', G.timeUnit('mcm'),
-              { cols: 3, dc: 15, maxCount: 16, inst: '□ 안에 알맞은 수를 써넣으세요.' }),
+              { cols: 2, fixedCols: true, dc: 15, maxCount: 16, inst: '□ 안에 알맞은 수를 써넣으세요.' }),
             /* 2학년은 받아올림·받아내림이 없는 계산까지만 다룹니다.
                100 cm 를 넘어가는 계산은 3학년 1학기 '길이와 시간' 에 있습니다. */
             S(208, '길이의 합 (m, cm)', G.vUnit({
@@ -226,7 +226,7 @@
             S(185, '몇 시 몇 분 전으로 읽기', G.clockBefore(),
               { cols: 2, dc: 20, inst: '몇 시 몇 분 전으로 나타내세요.' }),
             S(186, '시간과 분 (1시간 = 60분)', G.timeUnit('hm'),
-              { cols: 3, dc: 24, inst: '□ 안에 알맞은 수를 써넣으세요.' }),
+              { cols: 2, fixedCols: true, dc: 24, inst: '□ 안에 알맞은 수를 써넣으세요.' }),
             /* 시간의 덧셈·뺄셈(걸린 시간)은 3학년 1학기 '길이와 시간' 내용이라
                2학년 목록에서는 뺐습니다. 번호 자리는 남겨 둡니다. */
             S(187, '걸린 시간 구하기', G.clockSpan('elapsed'),
@@ -235,11 +235,11 @@
               { cols: 2, dc: 20, inst: '끝난 시각을 구하세요.', retired: true }),
             /* 단위 관계만 익히면 되는 유형이라 문항 수를 적게 둡니다 */
             S(189, '하루의 시간 (1일 = 24시간)', G.timeUnit('dh'),
-              { cols: 3, dc: 15, maxCount: 16, inst: '□ 안에 알맞은 수를 써넣으세요.' }),
+              { cols: 2, fixedCols: true, dc: 15, maxCount: 16, inst: '□ 안에 알맞은 수를 써넣으세요.' }),
             S(190, '1주일 = 7일', G.timeUnit('wd'),
-              { cols: 3, dc: 15, maxCount: 16, inst: '□ 안에 알맞은 수를 써넣으세요.' }),
+              { cols: 2, fixedCols: true, dc: 15, maxCount: 16, inst: '□ 안에 알맞은 수를 써넣으세요.' }),
             S(191, '1년 = 12개월', G.timeUnit('ym'),
-              { cols: 3, dc: 15, maxCount: 16, inst: '□ 안에 알맞은 수를 써넣으세요.' }),
+              { cols: 2, fixedCols: true, dc: 15, maxCount: 16, inst: '□ 안에 알맞은 수를 써넣으세요.' }),
             S(192, '걸린 시간 구하기 (문장제)', G.wordTime('elapsed'),
               { cols: 2, dc: 12, inst: '문제를 읽고 답을 구하세요.' }),
             S(193, '끝난 시각 구하기 (문장제)', G.wordTime('end'),
@@ -295,11 +295,11 @@
         {
           no: 5, title: '길이와 시간', steps: [
             S(195, '길이 단위 바꾸기 (mm, cm, m)', G.timeUnit(['cmm', 'mcm']),
-              { cols: 3, dc: 18, inst: '□ 안에 알맞은 수를 써넣으세요.' }),
+              { cols: 2, fixedCols: true, dc: 18, inst: '□ 안에 알맞은 수를 써넣으세요.' }),
             S(196, '1 km = 1000 m', G.timeUnit('kmm'),
-              { cols: 3, dc: 15, maxCount: 16, inst: '□ 안에 알맞은 수를 써넣으세요.' }),
+              { cols: 2, fixedCols: true, dc: 15, maxCount: 16, inst: '□ 안에 알맞은 수를 써넣으세요.' }),
             S(197, '1분 = 60초', G.timeUnit('ms'),
-              { cols: 3, dc: 15, maxCount: 16, inst: '□ 안에 알맞은 수를 써넣으세요.' }),
+              { cols: 2, fixedCols: true, dc: 15, maxCount: 16, inst: '□ 안에 알맞은 수를 써넣으세요.' }),
             S(198, '길이의 덧셈 (받아올림 없음)', G.vUnit({
               op: '+', units: ['m', 'cm'], bases: [100], ranges: [[1, 8], [0, 49]], carries: 0
             }), { cols: 4, dc: 24 }),
@@ -354,7 +354,7 @@
             S(84, '몇십몇 ÷ 몇 (내림 있음, 나머지 없음)', G.longDiv({ b: [2, 9], q: [11, 49], rem: false, carryDown: true, aDigits: 2 }), { cols: 4, dc: 16, work: true }),
             S(85, '몇십몇 ÷ 몇 (내림·나머지 있음)', G.longDiv({ b: [3, 9], q: [11, 33], rem: true, carryDown: true, aDigits: 2 }), { cols: 4, dc: 16, work: true }),
             S(86, '세 자리 수 ÷ 한 자리 수', G.longDiv({ b: [3, 9], q: [30, 300], rem: true, aDigits: 3 }), { cols: 4, dc: 16, work: true }),
-            S(87, '나눗셈의 몫과 나머지', G.hDivR({ b: [2, 9], q: [2, 30], forceRem: true }), { cols: 3, dc: 24 }),
+            S(87, '나눗셈의 몫과 나머지', G.hDivR({ b: [2, 9], q: [2, 30], forceRem: true }), { cols: 2, fixedCols: true, dc: 24 }),
             S(88, '나눗셈의 검산', G.divCheck(), { cols: 2, dc: 16 })
           ]
         },
@@ -394,16 +394,16 @@
       key: '42', grade: 4, sem: 2, chapters: [
         {
           no: 1, title: '분수의 덧셈과 뺄셈', steps: [
-            S(102, '분모가 같은 진분수의 덧셈 (합이 진분수)', G.fracAddSame({ sumProper: true }), { cols: 4, dc: 32 }),
-            S(103, '분모가 같은 진분수의 덧셈 (합이 가분수)', G.fracAddSame({ sumProper: false }), { cols: 4, dc: 32 }),
-            S(104, '분모가 같은 대분수의 덧셈 (받아올림 없음)', G.fracAddSame({ mixed: true, sumProper: true }), { cols: 4, dc: 32 }),
-            S(105, '분모가 같은 대분수의 덧셈 (받아올림 있음)', G.fracAddSame({ mixed: true, sumProper: false }), { cols: 4, dc: 32 }),
-            S(106, '분모가 같은 진분수의 뺄셈', G.fracSubSame({}), { cols: 4, dc: 32 }),
+            S(102, '분모가 같은 진분수의 덧셈 (합이 진분수)', G.fracAddSame({ sumProper: true }), { cols: 3, fixedCols: true, dc: 32 }),
+            S(103, '분모가 같은 진분수의 덧셈 (합이 가분수)', G.fracAddSame({ sumProper: false }), { cols: 3, fixedCols: true, dc: 32 }),
+            S(104, '분모가 같은 대분수의 덧셈 (받아올림 없음)', G.fracAddSame({ mixed: true, sumProper: true }), { cols: 3, fixedCols: true, dc: 32 }),
+            S(105, '분모가 같은 대분수의 덧셈 (받아올림 있음)', G.fracAddSame({ mixed: true, sumProper: false }), { cols: 3, fixedCols: true, dc: 32 }),
+            S(106, '분모가 같은 진분수의 뺄셈', G.fracSubSame({}), { cols: 3, fixedCols: true, dc: 32 }),
             S(107, '자연수 - 진분수', G.natMinusFrac(), { cols: 4, dc: 32 }),
-            S(108, '분모가 같은 대분수의 뺄셈 (받아내림 없음)', G.fracSubSame({ mixed: true, borrow: false }), { cols: 4, dc: 32 }),
-            S(109, '분모가 같은 대분수의 뺄셈 (받아내림 있음)', G.fracSubSame({ mixed: true, borrow: true }), { cols: 4, dc: 32 }),
-            S(110, '대분수와 진분수의 덧셈', G.fracAddSame({ mixed: true, mixed2: false }), { cols: 4, dc: 32 }),
-            S(111, '대분수와 진분수의 뺄셈', G.fracSubSame({ mixed: true, mixed2: false }), { cols: 4, dc: 32 })
+            S(108, '분모가 같은 대분수의 뺄셈 (받아내림 없음)', G.fracSubSame({ mixed: true, borrow: false }), { cols: 3, fixedCols: true, dc: 32 }),
+            S(109, '분모가 같은 대분수의 뺄셈 (받아내림 있음)', G.fracSubSame({ mixed: true, borrow: true }), { cols: 3, fixedCols: true, dc: 32 }),
+            S(110, '대분수와 진분수의 덧셈', G.fracAddSame({ mixed: true, mixed2: false }), { cols: 3, fixedCols: true, dc: 32 }),
+            S(111, '대분수와 진분수의 뺄셈', G.fracSubSame({ mixed: true, mixed2: false }), { cols: 3, fixedCols: true, dc: 32 })
           ]
         },
         {
@@ -450,10 +450,10 @@
         {
           no: 2, title: '약수와 배수', steps: [
             S(133, '약수 구하기', G.divisorList({ min: 12, max: 72 }), { cols: 2, dc: 20 }),
-            S(134, '배수 구하기', G.multipleList({ min: 3, max: 15, count: 5 }), { cols: 2, dc: 18 }),
+            S(134, '배수 구하기', G.multipleList({ min: 3, max: 15, count: 5 }), { cols: 1, fixedCols: true, dc: 18 }),
             S(135, '공약수 구하기', G.commonDivisor({}), { cols: 2, dc: 20 }),
             S(136, '최대공약수 구하기', G.commonDivisor({ gcdOnly: true }), { cols: 2, dc: 22 }),
-            S(137, '공배수 구하기', G.commonMultiple({}), { cols: 2, dc: 18 }),
+            S(137, '공배수 구하기', G.commonMultiple({}), { cols: 1, fixedCols: true, dc: 18 }),
             S(138, '최소공배수 구하기', G.commonMultiple({ lcmOnly: true }), { cols: 2, dc: 22 })
           ]
         },
@@ -473,12 +473,12 @@
         },
         {
           no: 5, title: '분수의 덧셈과 뺄셈', steps: [
-            S(147, '진분수의 덧셈 (분모가 다름)', G.fracDiffDen('+', {}), { cols: 4, dc: 32 }),
-            S(148, '대분수의 덧셈 (받아올림 없음)', G.fracDiffDen('+', { mixed: true, carry: false }), { cols: 4, dc: 32 }),
-            S(149, '대분수의 덧셈 (받아올림 있음)', G.fracDiffDen('+', { mixed: true, carry: true }), { cols: 4, dc: 32 }),
-            S(150, '진분수의 뺄셈 (분모가 다름)', G.fracDiffDen('-', {}), { cols: 4, dc: 32 }),
-            S(151, '대분수의 뺄셈 (받아내림 없음)', G.fracDiffDen('-', { mixed: true, borrow: false }), { cols: 4, dc: 32 }),
-            S(152, '대분수의 뺄셈 (받아내림 있음)', G.fracDiffDen('-', { mixed: true, borrow: true }), { cols: 4, dc: 32 })
+            S(147, '진분수의 덧셈 (분모가 다름)', G.fracDiffDen('+', {}), { cols: 3, fixedCols: true, dc: 32 }),
+            S(148, '대분수의 덧셈 (받아올림 없음)', G.fracDiffDen('+', { mixed: true, carry: false }), { cols: 3, fixedCols: true, dc: 32 }),
+            S(149, '대분수의 덧셈 (받아올림 있음)', G.fracDiffDen('+', { mixed: true, carry: true }), { cols: 3, fixedCols: true, dc: 32 }),
+            S(150, '진분수의 뺄셈 (분모가 다름)', G.fracDiffDen('-', {}), { cols: 3, fixedCols: true, dc: 32 }),
+            S(151, '대분수의 뺄셈 (받아내림 없음)', G.fracDiffDen('-', { mixed: true, borrow: false }), { cols: 3, fixedCols: true, dc: 32 }),
+            S(152, '대분수의 뺄셈 (받아내림 있음)', G.fracDiffDen('-', { mixed: true, borrow: true }), { cols: 3, fixedCols: true, dc: 32 })
           ]
         }
       ]
@@ -504,8 +504,8 @@
           no: 2, title: '분수의 곱셈', steps: [
             S(153, '분수 × 자연수', G.fracMulGen('fn'), { cols: 4, dc: 32 }),
             S(154, '자연수 × 분수', G.fracMulGen('nf'), { cols: 4, dc: 32 }),
-            S(155, '진분수 × 진분수', G.fracMulGen('ff'), { cols: 4, dc: 32 }),
-            S(156, '대분수 × 대분수', G.fracMulGen('kk'), { cols: 4, dc: 32 }),
+            S(155, '진분수 × 진분수', G.fracMulGen('ff'), { cols: 3, fixedCols: true, dc: 32 }),
+            S(156, '대분수 × 대분수', G.fracMulGen('kk'), { cols: 3, fixedCols: true, dc: 32 }),
             S(157, '세 분수의 곱셈 (진분수)', G.fracMul3(false), { cols: 2, dc: 20 }),
             S(158, '세 분수의 곱셈 (대분수 포함)', G.fracMul3(true), { cols: 2, dc: 20 })
           ]
@@ -549,9 +549,9 @@
       key: '62', grade: 6, sem: 2, chapters: [
         {
           no: 1, title: '분수의 나눗셈', steps: [
-            S(170, '분모가 같은 분수의 나눗셈', G.fracDivGen('same'), { cols: 4, dc: 32 }),
-            S(171, '분모가 다른 분수의 나눗셈', G.fracDivGen('diff'), { cols: 4, dc: 32 }),
-            S(172, '대분수의 나눗셈', G.fracDivGen('kk'), { cols: 4, dc: 32 })
+            S(170, '분모가 같은 분수의 나눗셈', G.fracDivGen('same'), { cols: 3, fixedCols: true, dc: 32 }),
+            S(171, '분모가 다른 분수의 나눗셈', G.fracDivGen('diff'), { cols: 3, fixedCols: true, dc: 32 }),
+            S(172, '대분수의 나눗셈', G.fracDivGen('kk'), { cols: 3, fixedCols: true, dc: 32 })
           ]
         },
         {
@@ -568,7 +568,7 @@
           no: 4, title: '비례식과 비례배분', steps: [
             S(179, '가장 간단한 자연수의 비로 나타내기', G.simplestRatio(), { cols: 2, dc: 22 }),
             S(180, '비례식에서 □ 안의 수 구하기', G.proportionBox(), { cols: 2, dc: 22 }),
-            S(181, '비례배분', G.proportionalShare(), { cols: 2, dc: 18 })
+            S(181, '비례배분', G.proportionalShare(), { cols: 1, fixedCols: true, dc: 18 })
           ]
         }
       ]
