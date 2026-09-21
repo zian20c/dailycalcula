@@ -1,0 +1,14 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    {
+      "name": "site",
+      "runtimeExecutable": "python",
+      "runtimeArgs": [
+        ".claude/dev-server.py",
+        "8777"
+      ],
+      "port": 8777
+    }
+  ]
+}

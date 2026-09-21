@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>매일연산 — 초등 연산 학습지</title>
+<meta name="description" content="초등 1~6학년 연산 학습지를 무료로 만들고 인쇄하세요.">
+<link rel="stylesheet" href="css/style.css?v=20260921j">
+</head>
+<body class="home">
+
+<nav class="nav">
+  <div class="nav-in">
+    <a class="brand" href="index.html">
+      <svg class="brand-mark" width="34" height="34" viewBox="0 0 34 34" fill="none" aria-hidden="true">
+        <path d="M3 7.5c5-1.8 9.3-.7 14 2.5v19c-4.3-3-8.9-3.9-14-2V7.5Z" fill="#4dabff"/>
+        <path d="M31 7.5c-5-1.8-9.3-.7-14 2.5v19c4.3-3 8.9-3.9 14-2V7.5Z" fill="#bde6ff"/>
+        <path d="M17 10v19M3 27c5.2-1.9 9.7-.8 14 2 4.4-2.8 8.9-3.9 14-2" stroke="#0878f9" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="m23.5 4.4 4.2 2.5-8 13.5-4.5 2  .4-4.9 7.9-13.1Z" fill="#0878f9" stroke="#fff" stroke-width="1.1"/>
+        <path d="m23.6 4.4 4.1 2.5 1-1.7c.7-1.1.3-2.5-.8-3.2-1.1-.6-2.5-.3-3.2.8l-1.1 1.6Z" fill="#ffca3a" stroke="#fff" stroke-width="1.1"/>
+      </svg>
+      매일<span>연산</span>
+    </a>
+    <div class="nav-links">
+      <a href="calc.html">문제지 만들기</a>
+      <a href="answer.html">정답지</a>
+    </div>
+    <a class="nav-cta" href="calc.html">시작하기</a>
+  </div>
+</nav>
+
+<!-- ================= 첫 화면 ================= -->
+<header class="hero">
+  <span class="hero-blob b1"></span>
+  <span class="hero-blob b2"></span>
+  <div class="hero-in">
+
+    <div class="hero-copy">
+      <h1>매일 새롭게 만드는<br><b>초등 연산 학습지</b></h1>
+      <p class="hero-sub">
+        원하는 학년과 단원을 선택하면,<br>
+        바로 인쇄할 수 있는 연산 문제지를 빠르게 생성해요.<br>
+        아이들의 수학 기초를 더 탄탄하게!
+      </p>
+
+      <div class="hero-chips">
+        <div class="chip">
+          <span class="chip-ic t-pink"><span class="icon-glyph">🎲</span></span>
+          <div><b>매번 새로운 숫자 생성</b><span>같은 유형도 매번 다른 문제로!</span></div>
+        </div>
+        <div class="chip">
+          <span class="chip-ic t-green"><span class="icon-glyph">📚</span></span>
+          <div><b>2022 개정 교육과정 반영</b><span>최신 교과과정에 맞춘 구성!</span></div>
+        </div>
+      </div>
+
+      <a class="cta" href="calc.html">
+        <span class="cta-doc" aria-hidden="true">▤</span>
+        문제지 만들러 가기
+        <svg class="arw" width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+          <path d="M5 12h13M12.5 6l6 6-6 6" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </a>
+    </div>
+
+    <!-- 아래 두 장은 그림이 아니라, 이 사이트의 생성기가 방금 만든 문제입니다 -->
+    <div class="hero-art">
+      <span class="art-note">오늘도<br>수학이 즐거워요!</span>
+      <span class="art-spark s1">✦</span><span class="art-spark s2">✧</span>
+      <span class="art-squiggle" aria-hidden="true"><svg viewBox="0 0 55 90"><path d="M38 4C5 12 8 29 37 29 52 29 51 43 31 50 2 60 6 78 44 85"/></svg></span>
+      <div class="sheet sheet-q">
+        <div class="sheet-head">
+          <span class="sheet-brand"><i>▰</i> 매일연산 <em>✎</em></span>
+          <span class="sheet-title" id="demo-title">초등 연산</span>
+        </div>
+        <div class="sheet-meta">학년 ______  반 ______  이름 __________</div>
+        <ol class="sheet-list" id="demo-q"></ol>
+        <div class="sheet-cheer">할 수 있어요!</div>
+      </div>
+      <div class="sheet sheet-a">
+        <div class="sheet-atitle">정답지</div>
+        <ol class="sheet-list" id="demo-a"></ol>
+      </div>
+    </div>
+
+  </div>
+</header>
+
+<!-- ================= 기능 ================= -->
+<section class="sec" id="features">
+  <div class="sec-eyebrow">FEATURES</div>
+  <h2>매일연산이 특별한 이유</h2>
+
+  <div class="cards">
+    <div class="card">
+      <span class="ico t-pink">
+        <span class="icon-glyph">🎲</span>
+      </span>
+      <div>
+        <h3>매번 다른 숫자</h3>
+        <p>‘다른 문제 뽑기’를 누를 때마다 문제가 새로 만들어집니다.
+           같은 유형을 오늘도 내일도 다른 숫자로 연습할 수 있어요.</p>
+      </div>
+    </div>
+
+    <div class="card">
+      <span class="ico t-green">
+        <span class="icon-glyph">📚</span>
+      </span>
+      <div>
+        <h3>교과 진도에 맞춘 유형</h3>
+        <p>1학년 가르기·모으기부터 6학년 비례배분까지,
+           학년·학기·단원별로 정리된 다양한 유형 중에서 고르세요.</p>
+      </div>
+    </div>
+
+    <div class="card">
+      <span class="ico t-purple">
+        <span class="icon-glyph">🖨️</span>
+      </span>
+      <div>
+        <h3>A4 한 장에 딱</h3>
+        <p>문항 수와 글자 크기를 미리 재서 언제나 한 장에 맞춥니다.
+           두 장으로 넘어가는 일이 없어요.</p>
+      </div>
+    </div>
+
+    <div class="card">
+      <span class="ico t-blue">
+        <span class="number-icon"><b>1</b><b>2</b><b>3</b><b>4</b></span>
+      </span>
+      <div>
+        <h3>문제지번호로 정답 확인</h3>
+        <p>문제지마다 8자리 번호가 찍힙니다.
+           그 번호만 넣으면 똑같은 문제지의 정답을 언제든 다시 볼 수 있어요.</p>
+      </div>
+    </div>
+
+    <div class="card">
+      <span class="ico t-orange">
+        <span class="icon-glyph">🙋</span>
+      </span>
+      <div>
+        <h3>설치·가입 없이</h3>
+        <p>인터넷 연결도, 로그인도 필요 없습니다.
+           파일을 열기만 하면 PC에서도 휴대폰에서도 바로 동작해요.</p>
+      </div>
+    </div>
+
+    <div class="card">
+      <span class="ico t-mint">
+        <span class="check-icon">✓</span>
+      </span>
+      <div>
+        <h3>정답 바로 보기</h3>
+        <p>화면에서 ‘정답 보기’를 누르면 답이 바로 채워집니다.
+           채점하면서 확인하기 편해요.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= 쓰는 순서 ================= -->
+<section class="steps">
+  <div class="sec">
+    <div class="sec-eyebrow">HOW IT WORKS</div>
+    <h2>3단계로 쉽고 빠르게!</h2>
+    <p class="sec-lead">고르고, 만들고, 인쇄하면 바로 끝납니다.</p>
+
+    <div class="step-row">
+      <div class="step">
+        <span class="step-no">1</span>
+        <span class="ico">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+            <path d="M6 3.5h8L19 8v12.5H6z" stroke="#3b7ddd" stroke-width="1.8" stroke-linejoin="round"/>
+            <path d="M13.5 3.8V8.5H18.6M9 12.5h7M9 16h5" stroke="#3b7ddd" stroke-width="1.6" stroke-linecap="round"/>
+          </svg>
+        </span>
+        <div>
+          <h3>학년·단원 고르기</h3>
+          <p>학년과 학기, 단원, 유형을 차례로 고릅니다.</p>
+        </div>
+      </div>
+
+      <svg class="step-arw" width="26" height="26" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+        <path d="M5 12h13M12.5 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+
+      <div class="step">
+        <span class="step-no">2</span>
+        <span class="ico">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+            <circle cx="12" cy="12" r="3.2" stroke="#3b7ddd" stroke-width="1.8"/>
+            <path d="M12 2.8v2.6M12 18.6v2.6M21.2 12h-2.6M5.4 12H2.8M18.5 5.5l-1.8 1.8M7.3 16.7l-1.8 1.8M18.5 18.5l-1.8-1.8M7.3 7.3 5.5 5.5" stroke="#3b7ddd" stroke-width="1.7" stroke-linecap="round"/>
+          </svg>
+        </span>
+        <div>
+          <h3>문제 뽑기</h3>
+          <p>문항 수를 정하고 누르면 숫자가 새로 만들어집니다.</p>
+        </div>
+      </div>
+
+      <svg class="step-arw" width="26" height="26" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+        <path d="M5 12h13M12.5 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+
+      <div class="step">
+        <span class="step-no">3</span>
+        <span class="ico">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+            <path d="M6.5 9.5V3.5h11v6" stroke="#3b7ddd" stroke-width="1.8" stroke-linejoin="round"/>
+            <rect x="3" y="9.5" width="18" height="7.5" rx="2.4" stroke="#3b7ddd" stroke-width="1.8"/>
+            <path d="M6.5 15h11v5.5h-11z" stroke="#3b7ddd" stroke-width="1.8" stroke-linejoin="round"/>
+          </svg>
+        </span>
+        <div>
+          <h3>인쇄하기</h3>
+          <p>A4 한 장으로 인쇄합니다. 정답지도 따로 뽑을 수 있어요.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="uses">
+      <div class="use">
+        <span class="ico t-orange">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+            <path d="M3 8.5 12 4.5l9 4-9 4-9-4Z" stroke="#dd8b3c" stroke-width="1.8" stroke-linejoin="round"/>
+            <path d="M6.5 10.5v5c0 1.4 2.5 2.6 5.5 2.6s5.5-1.2 5.5-2.6v-5" stroke="#dd8b3c" stroke-width="1.8" stroke-linejoin="round"/>
+          </svg>
+        </span>
+        <div><b>“수업 준비 시간이 확 줄었어요!”</b></div>
+      </div>
+      <div class="use">
+        <span class="ico t-pink">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+            <path d="M4.5 9.5a4 4 0 0 1 7.5-2 4 4 0 0 1 7.5 2c0 4.5-7.5 9-7.5 9s-7.5-4.5-7.5-9Z" stroke="#e0719b" stroke-width="1.8" stroke-linejoin="round"/>
+          </svg>
+        </span>
+        <div><b>“아이의 연산 실력이 달라졌어요!”</b><span>반복 연산 연습에 최적화</span></div>
+      </div>
+      <div class="use">
+        <span class="ico t-green">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+            <path d="M3.5 11 12 4l8.5 7" stroke="#3f9f63" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M5.8 12.6V20h12.4v-7.4" stroke="#3f9f63" stroke-width="1.8" stroke-linejoin="round"/>
+          </svg>
+        </span>
+        <div><b>“집에서도 쉽고 재미있게!”</b><span>학부모 홈학습으로도 좋아요</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<p class="closing">매일의 작은 연습이, 아이의 큰 성장을 만듭니다.</p>
+
+<section class="contact-cta" id="contact">
+  <div>
+    <span>CONTACT</span>
+    <h2>궁금한 점이 있으신가요?</h2>
+    <p>서비스 이용 중 불편한 점이나 필요한 학습 유형을 알려주세요.</p>
+  </div>
+  <a href="#footer">문의하기 <b>→</b></a>
+</section>
+
+<div class="footer" id="footer">매일연산 · 집에서 만드는 연산 학습지</div>
+
+<script src="js/core.js?v=20260921d"></script>
+<script src="js/gen.js?v=20260921d"></script>
+<script src="js/curriculum.js?v=20260921d"></script>
+<script>
+(function () {
+  /* 첫 화면의 문제지 미리보기 — 그림이 아니라 실제 생성기로 만듭니다.
+     열 때마다 숫자가 바뀌는 것이 이 사이트의 핵심이라 대문에서도 그대로 보여 줍니다. */
+  var C = window.Core, G = window.Gen;
+  var rng = C.makeRng(C.randomSeed());
+  var add = G.hAdd({ a: { d: 2 }, b: { d: 2 } });
+  var sub = G.hSub({ a: { d: 2 }, b: { d: 2 } });
+  var q = document.getElementById('demo-q');
+  var a = document.getElementById('demo-a');
+  document.getElementById('demo-title').textContent = '초등 2학년 · 덧셈과 뺄셈';
+
+  for (var i = 0; i < 10; i++) {
+    var p = (i % 2 ? sub : add)(rng);
+    var t = p.lines[0];
+    var li = document.createElement('li');
+    li.innerHTML = '<i>' + (i + 1) + ')</i>' + t[0].n + ' ' + t[1] + ' ' + t[2].n + ' =';
+    q.appendChild(li);
+    var la = document.createElement('li');
+    la.innerHTML = '<i>' + (i + 1) + ')</i>' + p.ansList[0];
+    a.appendChild(la);
+  }
+})();
+</script>
+</body>
+</html>

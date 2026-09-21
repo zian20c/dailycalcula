@@ -1,0 +1,12 @@
+# 의존성·빌드 결과물 (토스 미니앱으로 옮기면 생깁니다)
+node_modules/
+dist/
+.granite/
+
+# 임시 파일
+_tmp-*
+*.log
+
+# OS
+Thumbs.db
+.DS_Store
